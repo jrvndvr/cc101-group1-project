@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
 </head>
 <body>
-    <p>GROUP1</p>
+    <h1>AHVRIL PANGET</h1>
+    <canvas id="qrcode"></canvas>
+    <script>
+    const myWebsite = "https://jrvndvr.github.io/cc101-group1-project/";
+    QRCode.toCanvas(document.getElementById('qrcode'), myWebsite, {
+            width: 300,
+            margin: 2,
+            errorCorrectionLevel: 'M'
+        }, function (error) {
+            if (error) console.error(error)
+            console.log("✅ QR Code Created Successfully!");
+        })
+    </script>
 </body>
 </html>
